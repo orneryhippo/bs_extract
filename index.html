@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Submission Form</title>
+    <title>Product Information Form</title>
 </head>
 <body>
-    <h1>Submit a URL for Testing</h1>
-    <form action="/scrape-url/" method="post">
-        <label for="url">URL:</label><br>
-        <input type="text" id="url" name="url" value=""><br><br>
+    <form method="post">
+        Product Name: <input type="text" name="productName"><br>
+        Manufacturer: <input type="text" name="manufacturer"><br>
+        Key Claim(s) for this specific product: <input type="text" name="keyClaimsProduct"><br>
+        Key Claim(s) for this category of product: <input type="text" name="keyClaimsCategory"><br>
+        Expert(s) cited as proponent of this product or category: <input type="text" name="experts"><br>
+        Studies cited: <input type="text" name="studies"><br>
+        Other Input: <input type="text" name="otherInput"><br>
+        URL(s) Involved: <input type="text" name="urls"><br>
         <input type="submit" value="Submit">
     </form>
 </body>
