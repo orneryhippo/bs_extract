@@ -58,7 +58,8 @@ async def scrape_url(request_body: ScrapeRequest):
             soup = BeautifulSoup(response.content, 'html.parser')
             full_text=soup.get_text()
             # Extracting paragraphs and links
-            paragraphs = soup.p.get_text() # [p.get_text() for p in soup.find_all('p')]
+            # paragraphs = soup.p.get_text() # [p.get_text() for p in soup.find_all('p')]
+            
             links = [a['href'] for a in soup.find_all('a', href=True)]
 
             # Returning the scraped data
