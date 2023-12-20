@@ -79,3 +79,7 @@ async def scrape_url(request_body: ScrapeRequest):
 @app.get("/")
 async def index():
     return {"content":"hello"}
+
+@app.get("/foo")
+async def foo():
+    return {"foo":"bar"}
