@@ -59,7 +59,7 @@ async def scrape_url(request_body: ScrapeRequest):
             full_text=soup.get_text()
             # Extracting paragraphs and links
             # paragraphs = soup.p.get_text() # [p.get_text() for p in soup.find_all('p')]
-            
+
             links = [a['href'] for a in soup.find_all('a', href=True)]
 
             # Returning the scraped data
@@ -74,3 +74,8 @@ async def scrape_url(request_body: ScrapeRequest):
         # General error handling
         logging.error(f'Error processing URL: {url}, Error: {str(e)}')
         raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@app.get("/")
+async def index():
+    return {"content":"hello"}
