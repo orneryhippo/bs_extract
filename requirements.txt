@@ -2,7 +2,4 @@ fastapi==0.79.0
 uvicorn==0.18.2
 httpx==0.23.0
 beautifulsoup4==4.11.1
-databases==0.5.5
-asyncpg==0.25.0
-psycopg2-binary==2.9.3
-python-multipart==0.0.6
+# gunicorn
