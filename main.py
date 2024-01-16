@@ -23,7 +23,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 app = FastAPI()
 
 # Defining a constant for the maximum number of redirects
-MAX_REDIRECTS = 1
+MAX_REDIRECTS = 10
 
 # @app.post("/scrape-url/")
 # async def scrape_url(request: Request):
